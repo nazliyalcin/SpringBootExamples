@@ -1,0 +1,15 @@
+logging:
+  level:
+    org.springframework.web: debug
+    org.springframework.jdbc.datasource: debug
+  file: petclinic.log
+spring:
+  thymeleaf: # Thymeleaf
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/
+  resources: # Static resources
+    static-locations: file:src/main/resources/public/
+    cache:
+      period: 0
