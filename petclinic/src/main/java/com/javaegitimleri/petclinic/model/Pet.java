@@ -1,9 +1,30 @@
 package com.javaegitimleri.petclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="t_pet")
 public class Pet {
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="petClinicSeqGen")
+	@SequenceGenerator(name="petClinicSeqGen",sequenceName="petclinic_sequence")
 	private long id;
+	
+	@Column(name="name")
 	private String name;
+	@Column(name="birth_date")
 	private String birthDate;
+	
+	@ManyToOne
+	@JoinColumn(name="owner_id")
 	private Owner owner;
 	public long getId() {
 		return id;

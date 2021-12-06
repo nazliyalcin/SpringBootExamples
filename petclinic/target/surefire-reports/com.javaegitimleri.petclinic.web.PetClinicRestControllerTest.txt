@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.javaegitimleri.petclinic.web.PetClinicRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.328 s <<< FAILURE! - in com.javaegitimleri.petclinic.web.PetClinicRestControllerTest
+testdeleteOwner(com.javaegitimleri.petclinic.web.PetClinicRestControllerTest)  Time elapsed: 0.297 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8080/rest/owner/4": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at com.javaegitimleri.petclinic.web.PetClinicRestControllerTest.testdeleteOwner(PetClinicRestControllerTest.java:89)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.javaegitimleri.petclinic.web.PetClinicRestControllerTest.testdeleteOwner(PetClinicRestControllerTest.java:89)
+
